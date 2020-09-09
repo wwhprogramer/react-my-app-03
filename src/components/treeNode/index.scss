@@ -1,0 +1,22 @@
+.tree-list {
+    width: 300px;
+    padding-left: -20px;
+    box-shadow: 0 0 4px #333;
+    .tree-item {
+        margin-left: 20px;
+        padding: 2px;
+        .tree-title {
+            &:hover {
+                background: rgba(122, 122, 122, 0.568);
+                cursor: pointer;
+            }
+        }
+        img {
+            width: 30px;
+            height: 30px;
+        }
+    }
+    & > .tree-item {
+        margin-left: 0;
+    }
+}
