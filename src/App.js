@@ -3,16 +3,14 @@ import React from 'react';
 import './App.css';
 import "antd/dist/antd.css";
 // import TreeNode from './components/treeNode/index'
-import Menubar from './components/menubar/index'
-
+import Container from './components/container'
 
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Button type="primary">新增功能菜单</Button>
-        <Menubar/>
+        <Container/>
       </header>
     </div>
   );

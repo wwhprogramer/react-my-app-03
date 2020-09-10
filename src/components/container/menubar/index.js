@@ -1,6 +1,8 @@
 import React from 'react'
 import './index.scss'
 import { Tree } from 'antd';
+import containerService from 'services/containerService'
+
 
 const x = 3;
 const y = 2;
@@ -38,6 +40,18 @@ class Menubar extends React.Component {
 
     onSelect = (selectedKeys, info) => {
         console.log(selectedKeys, info)
+    }
+
+    componentDidMount() {
+        containerService.getAllMenu(
+            {},
+            res => {
+                console.log(res)
+            },
+            err => {
+                console.log(err)
+            }
+        )
     }
 
     render() {

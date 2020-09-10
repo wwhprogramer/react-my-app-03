@@ -2,12 +2,20 @@ import axios from 'axios'
 
 const baseUrlProxy = '/apis'
 const firstOpenApiProxy = '/firstOpenApi'
+const localApiProxy = '/localApi'
 const allApi = {
+    /**
+     * 竞赛项目api
+     */
     findNewComProject: baseUrlProxy + '/comProject/findNewComProject', // 获取所有新竞赛项目
     /**
      * 开放接口api
      */
     todayVideo: firstOpenApiProxy + '/todayVideo', // 每日视频推荐接口
+    /**
+     * 本地api
+     */
+    getAllMenu: localApiProxy + '/menubar/getAllMenu', // 获取所有菜单树
 }
 
 const getPath = (urlId) => allApi[urlId]
