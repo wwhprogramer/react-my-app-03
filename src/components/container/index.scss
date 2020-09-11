@@ -1,0 +1,11 @@
+.container {
+    .menubar-menuform {
+        display: flex;
+        .menubar {
+            min-width: 200px;
+        }
+        .menuform {
+            min-width: 500px;
+        }
+    }
+}

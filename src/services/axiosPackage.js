@@ -16,34 +16,35 @@ const allApi = {
      * 本地api
      */
     getAllMenu: localApiProxy + '/menubar/getAllMenu', // 获取所有菜单树
+    saveMenu: localApiProxy + '/menubar/saveMenu', // 保存所有菜单树
 }
 
 const getPath = (urlId) => allApi[urlId]
 const sendGet = (urlId, params, cb, fail) => {
     let path = getPath(urlId)
     axios.get(path, params)
-    .then(
-        res => {
-            if(cb && typeof cb === 'function') cb(res.data)
-        }
-    ).catch(
-        err => {
-            if(fail && typeof fail === 'function') fail(err.data)
-        }
-    )
+        .then(
+            res => {
+                if (cb && typeof cb === 'function') cb(res.data)
+            }
+        ).catch(
+            err => {
+                if (fail && typeof fail === 'function') fail(err.data)
+            }
+        )
 }
 const sendPost = (urlId, params, cb, fail) => {
     let path = getPath(urlId)
     axios.post(path, params)
-    .then(
-        res => {
-            if(cb && typeof cb === 'function') cb(res.data)
-        }
-    ).catch(
-        err => {
-            if(fail && typeof fail === 'function') fail(err.data)
-        }
-    )
+        .then(
+            res => {
+                if (cb && typeof cb === 'function') cb(res.data)
+            }
+        ).catch(
+            err => {
+                if (fail && typeof fail === 'function') fail(err.data)
+            }
+        )
 }
 
 export default {

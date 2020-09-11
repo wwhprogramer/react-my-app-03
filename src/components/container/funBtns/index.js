@@ -6,14 +6,14 @@ class Container extends React.Component {
     state = {
     };
 
-    addFunMenu = () => {
-        this.props.menuForm = true
+    addFunChildMenu = () => {
+        this.props.addFunChildMenu()
     }
 
     render() {
         return (
             <div>
-                <Button type="primary" onClick={this.addFunMenu}>新增功能菜单</Button>
+                <Button type="primary" onClick={this.addFunChildMenu}>新增功能菜单</Button>
             </div>
         )
     }
